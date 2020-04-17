@@ -1,0 +1,447 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amcharts css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
+        media="all" />
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="#"><img src="assets/images/media/logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="instance.html" aria-expanded="true"><i
+                                        class="ti-dashboard"></i><span>Dashboard</span></a>
+                            </li>
+                            <li class="active"><a href="users.html"><i class="ti-user"></i><span>Users</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">User Management</h4>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Demo User<i
+                                    class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Search</h4>
+                                <div class="form-row mb-5">
+                                    <div class="col-md-4">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" id="username">
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-5">
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#createUserModal"><i class="fa fa-plus"></i>&nbsp;
+                                            &nbsp; &nbsp;Create User</button>
+                                    </div>
+                                    <div class="modal fade" id="createUserModal">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Create User</h5>
+                                                    <button type="button" class="close"
+                                                        data-dismiss="modal"><span>&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form class="needs-validation" id="createSubmit" novalidate="">
+                                                        <div class="form-row">
+                                                            <div class="col-md-5">
+                                                                <label for="instanceName"
+                                                                    class="col-form-label">Instance
+                                                                    name</label>
+                                                                <select class="custom-select" id="instanceName"
+                                                                    required>
+                                                                    <option value="instance 1">Demo Instance 1</option>
+                                                                    <option value="instance 2">Demo Instance 2</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Please choose an instance
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-5">
+                                                                <label for="email" class="col-form-label">Email</label>
+                                                                <input type="email" class="form-control" id="email"
+                                                                    placeholder="Email" required="">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter an email
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col-md-5">
+                                                                <label for="firstName" class="col-form-label">First
+                                                                    Name</label>
+                                                                <input type="text" class="form-control" id="firstName"
+                                                                    placeholder="First Name" required="">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter a first name
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-5">
+                                                                <label for="lastName" class="col-form-label">Last
+                                                                    Name</label>
+                                                                <input type="text" class="form-control" id="lastName"
+                                                                    placeholder="Last Name" required="">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter a last name
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col-md-5">
+                                                                <label for="username"
+                                                                    class="col-form-label">Username</label>
+                                                                <input type="text" class="form-control" id="username"
+                                                                    required="" placeholder="Username">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter a username
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-5">
+                                                                <label for="password"
+                                                                    class="col-form-label">Password</label>
+                                                                <input type="password" class="form-control"
+                                                                    id="password" required="" placeholder="Password">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter a password
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                        </div>
+                                                        <br />
+                                                        <div class="form-row pull-right">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>&nbsp;
+                                                            <button type="submit" class="btn btn-primary"
+                                                                for="createSubmit">Save changes</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-primary pull-right"><i
+                                                class="fa fa-search"></i>&nbsp; &nbsp; &nbsp;Search</button>
+                                    </div>
+                                </div>
+                                <h4 class="header-title">Details</h4>
+                                <div class="data-tables">
+                                    <div class="table-responsive">
+                                        <table id="dataTable" class="text-center table table-hover"
+                                            style="width: 100%;">
+                                            <thead class="bg-dark text-capitalize">
+                                                <tr class="text-white">
+                                                    <th>Name</th>
+                                                    <th>Username</th>
+                                                    <th>Instance</th>
+                                                    <th>Track</th>
+                                                    <th>Modules</th>
+                                                    <th>Tasks</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Abhinav Singh</td>
+                                                    <td>abhinav.singh</td>
+                                                    <td>Demo Instance 1</td>
+                                                    <td>HCM</td>
+                                                    <td>Payroll</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown col-lg-6 col-md-4 col-sm-6">
+                                                            <button class="btn btn-rounded btn-success dropdown-toggle"
+                                                                type="button" data-toggle="dropdown">
+                                                                Actions
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#instanceModal">Assign Insatnce</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#trackModal">Assign Track</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#roleModal">Assign Role</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sagar Trivedi</td>
+                                                    <td>sagar.trivedi</td>
+                                                    <td>Demo Instance 1</td>
+                                                    <td>Finance</td>
+                                                    <td>General Ledger</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown col-lg-6 col-md-4 col-sm-6">
+                                                            <button class="btn btn-rounded btn-success dropdown-toggle"
+                                                                type="button" data-toggle="dropdown">
+                                                                Actions
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#instanceModal">Assign Insatnce</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#trackModal">Assign Track</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#roleModal">Assign Role</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Atmaram Dhuri</td>
+                                                    <td>atmaram.dhuri</td>
+                                                    <td>Demo Instance 2</td>
+                                                    <td>SCM</td>
+                                                    <td>PO Invoice</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown col-lg-6 col-md-4 col-sm-6">
+                                                            <button class="btn btn-rounded btn-success dropdown-toggle"
+                                                                type="button" data-toggle="dropdown">
+                                                                Actions
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#instanceModal">Assign Insatnce</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#trackModal">Assign Track</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#roleModal">Assign Role</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rohit Mane</td>
+                                                    <td>rohit.mane</td>
+                                                    <td>Demo Instance 2</td>
+                                                    <td>HCM</td>
+                                                    <td>Payroll</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown col-lg-6 col-md-4 col-sm-6">
+                                                            <button class="btn btn-rounded btn-success dropdown-toggle"
+                                                                type="button" data-toggle="dropdown">
+                                                                Actions
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#instanceModal">Assign Insatnce</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#trackModal">Assign Track</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                                                    data-target="#roleModal">Assign Role</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <div class="offset-area">
+
+    </div>
+    <div class="modal fade" id="trackModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assign Track</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="hcm" value="HCM" class="custom-control-input">
+                                <label class="custom-control-label" for="hcm">HCM</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="scm" value="SCM" class="custom-control-input">
+                                <label class="custom-control-label" for="scm">SCM</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="fin" value="Finance" class="custom-control-input">
+                                <label class="custom-control-label" for="fin">Finance</label>
+                            </div>
+                        </div>
+                        <div class="form-row pull-right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="instanceModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assign Instance</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="form-row pull-right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="roleModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assign Role</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="form-row pull-right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Start datatable js -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

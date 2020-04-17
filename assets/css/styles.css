@@ -1592,6 +1592,20 @@ table.dbkit-table tr td {
     border: none;
 }
 
+.card-header {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bb32ff+0,ce6dff+100 */
+    background: #bb32ff;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #bb32ff 0%, #ce6dff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #bb32ff 0%, #ce6dff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #bb32ff 0%, #ce6dff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb32ff', endColorstr='#ce6dff', GradientType=0);
+    /* IE6-9 */
+}
+
 .according .card-header a {
     display: block;
     background: #EFF3F6;
