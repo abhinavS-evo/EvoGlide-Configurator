@@ -56,7 +56,8 @@
                                         class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li><a href="users.html"><i class="ti-user"></i><span>Users</span></a></li>
-                            <li><a href="constasks.html"><i class="ti-settings"></i><span>Consolidated Tasks</span></a></li>
+                            <li><a href="constasks.html"><i class="ti-settings"></i><span>Consolidated Tasks</span></a>
+                            </li>
                             <li class="active"><a href="tasks.html"><i class="ti-layers"></i><span>Tasks</span></a></li>
                         </ul>
                     </nav>
@@ -119,14 +120,30 @@
                                                     <label class="col-md-3">Date Element Name</label>
                                                     <input class="form-control col-md-3 form-control-sm" type="input"
                                                         value="Purchase Order">
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-5">
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="inputGroupFile02">
+                                                                <label class="custom-file-label"
+                                                                    for="inputGroupFile02">Choose file</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="form-row mb-1">
                                                     <label class="col-md-3">Import Type</label>
                                                     <select class="form-control col-md-3 form-control-sm">
                                                         <option>FBL</option>
                                                         <option>HDL</option>
-                                                        <!-- <option>CSV</option> -->
+                                                        <option>CSV</option>
                                                     </select>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#sheetData"><span
+                                                            class="fa fa-eye"></span>&nbsp;&nbsp;&nbsp;&nbsp;Preview
+                                                        File</div>
                                                 </div>
                                                 <div class="form-row mb-1">
                                                     <label class="col-md-3">Batch Size</label>
@@ -442,6 +459,68 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade modal-xl" id="sheetData">
+            <div class="modal-dialog modal-lg modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">UploadFile.xlsx</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Sheet 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">Sheet 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">Sheet 3</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-2" id="myTabContent">
+                            <div class="tab-pane fade show active mb-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <ul class="list-group col-md-6">
+                                    <li class="list-group-item">Sheet 1 Column 1</li>
+                                    <li class="list-group-item">Sheet 1 Column 2</li>
+                                    <li class="list-group-item">Sheet 1 Column 3</li>
+                                    <li class="list-group-item">Sheet 1 Column 4</li>
+                                    <li class="list-group-item">Sheet 1 Column 5</li>
+                                    <li class="list-group-item">Sheet 1 Column 6</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade mb-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <ul class="list-group col-md-6">
+                                    <li class="list-group-item">Sheet 2 Column 1</li>
+                                    <li class="list-group-item">Sheet 2 Column 2</li>
+                                    <li class="list-group-item">Sheet 2 Column 3</li>
+                                    <li class="list-group-item">Sheet 2 Column 4</li>
+                                    <li class="list-group-item">Sheet 2 Column 5</li>
+                                    <li class="list-group-item">Sheet 2 Column 6</li>
+                                    <li class="list-group-item">Sheet 2 Column 7</li>
+                                    <li class="list-group-item">Sheet 2 Column 8</li>
+                                    <li class="list-group-item">Sheet 2 Column 9</li>
+                                    <li class="list-group-item">Sheet 2 Column 10</li>
+                                    <li class="list-group-item">Sheet 2 Column 11</li>
+                                    <li class="list-group-item">Sheet 2 Column 12</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade mb-3" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <ul class="list-group col-md-6">
+                                    <li class="list-group-item">Sheet 3 Column 1</li>
+                                    <li class="list-group-item">Sheet 3 Column 2</li>
+                                    <li class="list-group-item">Sheet 3 Column 3</li>
+                                    <li class="list-group-item">Sheet 3 Column 4</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal fade modal-xl" id="editParameters">
             <div class="modal-dialog modal-lg modal-xl">
                 <div class="modal-content">
@@ -491,8 +570,8 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input type="text" class="form-control form-control-sm"
-                                                    value="Name" readonly></td>
+                                                <td><input type="text" class="form-control form-control-sm" value="Name"
+                                                        readonly></td>
                                                 <td>
                                                     <select class="form-control form-control-sm">
                                                         <option>Mapping</option>
@@ -510,10 +589,10 @@
                                                         <option>N</option>
                                                     </select></td>
                                                 <td><select class="form-control form-control-sm">
-                                                    <option>VARCHAR2</option>
-                                                    <option>NUMBER</option>
-                                                    <option>DATE</option>
-                                                </select></td>
+                                                        <option>VARCHAR2</option>
+                                                        <option>NUMBER</option>
+                                                        <option>DATE</option>
+                                                    </select></td>
                                                 <td><input typ="text" class="form-control form-control-sm" value="30"
                                                         style="text-align: right;"></td>
                                                 <td><input type="text" class="form-control form-control-sm"></td>
@@ -525,7 +604,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input type="text" class="form-control form-control-sm"
-                                                    value="AcctgEnvironmentCode" readonly></td>
+                                                        value="AcctgEnvironmentCode" readonly></td>
                                                 <td>
                                                     <select class="form-control form-control-sm">
                                                         <option>Mapping</option>
@@ -543,10 +622,10 @@
                                                         <option>N</option>
                                                     </select></td>
                                                 <td><select class="form-control form-control-sm">
-                                                    <option>VARCHAR2</option>
-                                                    <option>NUMBER</option>
-                                                    <option>DATE</option>
-                                                </select></td>
+                                                        <option>VARCHAR2</option>
+                                                        <option>NUMBER</option>
+                                                        <option>DATE</option>
+                                                    </select></td>
                                                 <td><input typ="text" class="form-control form-control-sm" value="30"
                                                         style="text-align: right;"></td>
                                                 <td><input type="text" class="form-control form-control-sm"></td>
@@ -558,7 +637,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input type="text" class="form-control form-control-sm"
-                                                    value="Attribute1" readonly></td>
+                                                        value="Attribute1" readonly></td>
                                                 <td>
                                                     <select class="form-control form-control-sm">
                                                         <option>SQL</option>
@@ -566,8 +645,8 @@
                                                         <option>Constant</option>
                                                     </select>
                                                 </td>
-                                                <td><input type="text" class="form-control form-control-sm"
-                                                        value=""></td>
+                                                <td><input type="text" class="form-control form-control-sm" value="">
+                                                </td>
                                                 <td><input type="text" class="form-control form-control-sm"
                                                         value="select SYSDATE from dual"></td>
                                                 <td><input type="text" class="form-control form-control-sm"></td>
@@ -576,13 +655,14 @@
                                                         <option>N</option>
                                                     </select></td>
                                                 <td><select class="form-control form-control-sm">
-                                                    <option>DATE</option>
-                                                    <option>VARCHAR2</option>
-                                                    <option>NUMBER</option>
-                                                </select></td>
+                                                        <option>DATE</option>
+                                                        <option>VARCHAR2</option>
+                                                        <option>NUMBER</option>
+                                                    </select></td>
                                                 <td><input typ="text" class="form-control form-control-sm" value="30"
                                                         style="text-align: right;"></td>
-                                                <td><input type="text" class="form-control form-control-sm" value="yyyy-mm-dd"></td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="yyyy-mm-dd"></td>
                                                 <td><select class="form-control form-control-sm">
                                                         <option>Y</option>
                                                         <option>N</option>
@@ -591,7 +671,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input type="text" class="form-control form-control-sm"
-                                                    value="Attribute2" readonly></td>
+                                                        value="Attribute2" readonly></td>
                                                 <td>
                                                     <select class="form-control form-control-sm">
                                                         <option>Constant</option>
@@ -599,20 +679,20 @@
                                                         <option>SQL</option>
                                                     </select>
                                                 </td>
-                                                <td><input type="text" class="form-control form-control-sm"
-                                                        value=""></td>
-                                                <td><input type="text" class="form-control form-control-sm"
-                                                        value=""></td>
+                                                <td><input type="text" class="form-control form-control-sm" value="">
+                                                </td>
+                                                <td><input type="text" class="form-control form-control-sm" value="">
+                                                </td>
                                                 <td><input type="text" class="form-control form-control-sm"></td>
                                                 <td><select class="form-control form-control-sm">
                                                         <option>Y</option>
                                                         <option>N</option>
                                                     </select></td>
                                                 <td><select class="form-control form-control-sm">
-                                                    <option>VARCHAR2</option>
-                                                    <option>NUMBER</option>
-                                                    <option>DATE</option>
-                                                </select></td>
+                                                        <option>VARCHAR2</option>
+                                                        <option>NUMBER</option>
+                                                        <option>DATE</option>
+                                                    </select></td>
                                                 <td><input typ="text" class="form-control form-control-sm" value="30"
                                                         style="text-align: right;"></td>
                                                 <td><input type="text" class="form-control form-control-sm"></td>
