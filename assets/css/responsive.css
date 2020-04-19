@@ -113,10 +113,10 @@
 
 /* Normal desktop :992px. */
 
-@media (min-width: 1200px) and (max-width: 1364px) {
+/* @media (min-width: 1200px) and (max-width: 1364px) {
 
     /* sidebar */
-    .sidebar-menu {
+    /* .sidebar-menu {
         width: 365px;
     }
     .nav-btn {
@@ -150,22 +150,22 @@
         margin-right: 0;
     }
     /* main content */
-    .main-content-inner {
+    /* .main-content-inner {
         padding: 0 15px 50px;
     }
     .page-container,
     .sbar_collapsed.page-container {
         padding-left: 0;
-    }
+    } */
     /* sidebar collapsed end */
     /* pricing */
-    .col-mdl-4 {
+    /* .col-mdl-4 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
+        max-width: 33.333333%; */
+    /* } */ 
+/* } */ 
 
 @media (min-width: 992px) and (max-width: 1199px) {
     /* dashboard one */

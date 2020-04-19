@@ -1,0 +1,332 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
+        media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container sbar_collapsed">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="#"><img src="assets/images/media/logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="instance.html" aria-expanded="true"><i
+                                        class="ti-dashboard"></i><span>Dashboard</span></a>
+                            </li>
+                            <li><a href="users.html"><i class="ti-user"></i><span>Users</span></a></li>
+                            <li class="active"><a href="constasks.html"><i class="ti-settings"></i><span>Consolidated
+                                        Tasks</span></a></li>
+                            <li><a href="tasks.html"><i class="ti-layers"></i><span>Tasks</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-4 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Consolidated Tasks</h4>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-5">
+                        <select class="custom-select form-control-sm col-md-5 pull-right" id="instanceSelect">
+                            <option>Demo Instance 1</option>
+                            <option>Demo Instance 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-4 clearfix" style="float: right;">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Demo User<i
+                                    class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="login.html">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-lg-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Search</h4>
+                                <div class="form-row mb-1">
+                                    <div class="col-md-4">
+                                        <label>Track</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>Finance</option>
+                                            <option>SCM</option>
+                                            <option>HCM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-4">
+                                        <label for="">Task Name</label>
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-1">
+                                    <div class="col-md-4">
+                                        <label>Module</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>All</option>
+                                            <option>Initial Setup</option>
+                                            <option>General Ledger</option>
+                                            <option>Disbursement</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-4">
+                                        <label for="">Upload Status</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>All</option>
+                                            <option>Done</option>
+                                            <option>Pending</option>
+                                            <option>Error</option>
+                                            <option>In Progress</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-1">
+                                    <div class="col-md-4">
+                                        <label>Assigned To</label>
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-4">
+                                        <label for="">Setup Status</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>All</option>
+                                            <option>Done</option>
+                                            <option>Hold</option>
+                                            <option>Error</option>
+                                            <option>In Progress</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-3">
+                                    <div class="col-md-11">
+                                        <button type="button" class="btn btn-primary pull-right"><i
+                                                class="fa fa-search"></i>&nbsp; &nbsp; &nbsp;Search</button>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-1">
+                                    <h4 class="header-title">Details</h4>
+                                </div>
+                                <div class="form-row">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="bg-dark">
+                                                <tr class="text-white">
+                                                    <th>Track</th>
+                                                    <th>Module</th>
+                                                    <th>Sequence</th>
+                                                    <th>Task Name</th>
+                                                    <th>Independant Task</th>
+                                                    <th>View Dependant</th>
+                                                    <th>Definition Mode</th>
+                                                    <th>Upload Method</th>
+                                                    <th>Upload</th>
+                                                    <th>Upload Status</th>
+                                                    <th>Upload Wizard Message/Comment</th>
+                                                    <th>Assigned To</th>
+                                                    <th>Setup Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>1</td>
+                                                    <td>Establish Enterprise Structure</td>
+                                                    <td>Y</td>
+                                                    <td></td>
+                                                    <td>Manual</td>
+                                                    <td>External</td>
+                                                    <td></td>
+                                                    <td>Done</td>
+                                                    <td></td>
+                                                    <td>Atmaram Dhuri</td>
+                                                    <td>Done</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>2</td>
+                                                    <td>Manage Business Unit</td>
+                                                    <td>N</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-sticky-note"></span></td>
+                                                    <td>HDL</td>
+                                                    <td>Upload Wizard</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-arrow-right"></span></td>
+                                                    <td>Pending</td>
+                                                    <td></td>
+                                                    <td>Abhinav Singh</td>
+                                                    <td>Pending</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>3</td>
+                                                    <td>Specify Ledger Options</td>
+                                                    <td>N</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-sticky-note"></span></td>
+                                                    <td>CSV</td>
+                                                    <td>Upload Wizard</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-arrow-right"></span></td>
+                                                    <td>Warning</td>
+                                                    <td></td>
+                                                    <td>Rohit Mane</td>
+                                                    <td>Hold</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>4</td>
+                                                    <td>Chart of Account Value Set Values</td>
+                                                    <td>N</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-sticky-note"></span></td>
+                                                    <td>FBL</td>
+                                                    <td>External</td>
+                                                    <td></td>
+                                                    <td>N/A</td>
+                                                    <td></td>
+                                                    <td>Rohit Mane</td>
+                                                    <td>Done</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>5</td>
+                                                    <td>Upload Cross-Validation Rules</td>
+                                                    <td>N</td>
+                                                    <td><span class="btn btn-primary btn-xs fa fa-sticky-note"></span></td>
+                                                    <td>Spreadsheet</td>
+                                                    <td>External</td>
+                                                    <td></td>
+                                                    <td>Done</td>
+                                                    <td></td>
+                                                    <td>Unassigned</td>
+                                                    <td>Done</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finance</td>
+                                                    <td>Initial Setup</td>
+                                                    <td>6</td>
+                                                    <td>Manage Reporting Currency</td>
+                                                    <td>Y</td>
+                                                    <td></td>
+                                                    <td>CSV</td>
+                                                    <td>Upload Wizard</td>
+                                                    <td></td>
+                                                    <td>Error</td>
+                                                    <td></td>
+                                                    <td>Sagar Trivedi</td>
+                                                    <td>N/A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <div class="offset-area">
+
+    </div>
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
