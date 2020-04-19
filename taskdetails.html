@@ -1,0 +1,680 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
+        media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container sbar_collapsed">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="#"><img src="assets/images/media/logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="instance.html" aria-expanded="true"><i
+                                        class="ti-dashboard"></i><span>Dashboard</span></a>
+                            </li>
+                            <li><a href="users.html"><i class="ti-user"></i><span>Users</span></a></li>
+                            <li><a href="constasks.html"><i class="ti-settings"></i><span>Consolidated Tasks</span></a></li>
+                            <li class="active"><a href="tasks.html"><i class="ti-layers"></i><span>Tasks</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-5 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Task: Purchase Order</h4>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-4">
+                        <select class="custom-select form-control-sm col-md-6 pull-right" id="instanceSelect">
+                            <option>Demo Instance 1</option>
+                            <option>Demo Instance 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-4 clearfix" style="float: right;">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Demo User<i
+                                    class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="login.html">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-lg-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="accordion1" class="according accordion-s2">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="card-link custom-header" data-toggle="collapse"
+                                                href="#accordion21">Task
+                                                Details</a>
+                                        </div>
+                                        <div class="accordion21" class="collapse show" data-parent="accordion1">
+                                            <div class="card-body">
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">Date Element Name</label>
+                                                    <input class="form-control col-md-3 form-control-sm" type="input"
+                                                        value="Purchase Order">
+                                                </div>
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">Import Type</label>
+                                                    <select class="form-control col-md-3 form-control-sm">
+                                                        <option>FBL</option>
+                                                        <option>HDL</option>
+                                                        <!-- <option>CSV</option> -->
+                                                    </select>
+                                                </div>
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">Batch Size</label>
+                                                    <input class="form-control col-md-3 form-control-sm" type="input"
+                                                        style="text-align: right;" value="1000">
+                                                </div>
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">UCM FileName Prefix</label>
+                                                    <input class="form-control col-md-3 form-control-sm" type="input"
+                                                        value="PurcOrder">
+                                                </div>
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">Base Job Definition Name</label>
+                                                    <input class="form-control col-md-3 form-control-sm" type="input"
+                                                        value="ImportSPOJob">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accordion1" class="according accordion-s2">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="card-link custom-header" data-toggle="collapse"
+                                                href="#accordion21">Edit Import
+                                                Parameter</a>
+                                        </div>
+                                        <div class="accordion21" class="collapse show" data-parent="accordion1">
+                                            <div class="card-body">
+                                                <div class="form-row mb-1">
+                                                    <label class="col-md-3">Import Parameter</label>
+                                                    <div class="input-group col-md-3">
+                                                        <input class="form-control form-control-sm" type="input"
+                                                            readonly>
+                                                        <div class="input-group-append">
+                                                            <button class="input-group-text fa fa-gears"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accordion1" class="according accordion-s2">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="card-link custom-header" data-toggle="collapse"
+                                                href="#accordion21">Sub-Data
+                                                Element Details</a>
+                                        </div>
+                                        <div class="accordion21" class="collapse show" data-parent="accordion1">
+                                            <div class="card-body">
+                                                <div class="single-table">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover">
+                                                            <thead class="bg-dark">
+                                                                <tr class="text-white">
+                                                                    <td>Sub Element Name</td>
+                                                                    <td>Data Element Code</td>
+                                                                    <td style="width: 3%;">Element Sequence</td>
+                                                                    <td>Active Sheet</td>
+                                                                    <td>File Name (UCM)</td>
+                                                                    <td>CSV Flag</td>
+                                                                    <td>Stage Table Name</td>
+                                                                    <td>Base Table Name</td>
+                                                                    <td>Batch Split Query</td>
+                                                                    <td>FBL Query</td>
+                                                                    <td>Mappings</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Purchase Order" readonly></td>
+                                                                    <td>PurchaseOrders</td>
+                                                                    <td style="width: 3%;"><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            style="text-align: right;" value="1"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked>
+                                                                        <!-- <span class="fa fa-trash"></span> -->
+                                                                    </td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="PoHeadersInterface" readonly></td>
+                                                                    <td><input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_HEADERS_INTERFACE_STAGING"
+                                                                            readonly></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_HEADERS_INTERFACE_BASE"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-gears"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-pencil-square-o"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-success btn-xs fa fa-gears "
+                                                                            data-toggle="modal"
+                                                                            data-target="#editParameters"></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Purchase Order" readonly></td>
+                                                                    <td>PurchaseOrderLines</td>
+                                                                    <td style="width: 3%;"><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            style="text-align: right;" value="2"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked>
+                                                                        <!-- <span class="fa fa-trash"></span> -->
+                                                                    </td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="PoLinesInterface" readonly></td>
+                                                                    <td><input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_LINES_INTERFACE_STAGING"
+                                                                            readonly></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_LINES_INTERFACE_BASE"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-gears"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-pencil-square-o"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-success btn-xs fa fa-gears "
+                                                                            data-toggle="modal"
+                                                                            data-target="#editParameters"></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Purchase Order" readonly></td>
+                                                                    <td>PurchaseOrderLineLocation</td>
+                                                                    <td style="width: 3%;"><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            style="text-align: right;" value="3"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked>
+                                                                        <!-- <span class="fa fa-trash"></span> -->
+                                                                    </td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="PoLineLocationsInterface" readonly>
+                                                                    </td>
+                                                                    <td><input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_LINE_LOCATIONS_INTERFACE_STAGING"
+                                                                            readonly></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_LINE_LOCATIONS_INTERFACE_BASE"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-gears"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-pencil-square-o"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-success btn-xs fa fa-gears "
+                                                                            data-toggle="modal"
+                                                                            data-target="#editParameters"></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Purchase Order" readonly></td>
+                                                                    <td>PurchaseOrderDistribution</td>
+                                                                    <td style="width: 3%;"><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            style="text-align: right;" value="4"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked>
+                                                                        <!-- <span class="fa fa-trash"></span> -->
+                                                                    </td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="PoDistributionsInterface" readonly>
+                                                                    </td>
+                                                                    <td><input type="checkbox"
+                                                                            class="form-control form-control-sm"
+                                                                            checked></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_DISTRIBUTIONS_INTERFACE_STAGING"
+                                                                            readonly></td>
+                                                                    <td><input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="XXEDM_PO_DISTRIBUTIONS_INTERFACE_BASE"
+                                                                            readonly></td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-gears"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="input-group">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                value="" readonly>
+                                                                            <div class="input-group-append">
+                                                                                <button
+                                                                                    class="input-group-text fa fa-pencil-square-o"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-success btn-xs fa fa-gears "
+                                                                            data-toggle="modal"
+                                                                            data-target="#editParameters"></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade modal-xl" id="editParameters">
+            <div class="modal-dialog modal-lg modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Purchase Order</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-row mb-3">
+                            <label class="col-md-2">Fusion Column Name</label>
+                            <input class="form-control col-md-3 form-control-sm" type="input" value="">
+                            <div class="col-md-1">
+                            </div>
+                            <span class="col-md-2">Sheet Column Name</span>
+                            <input class="form-control col-md-3 form-control-sm" type="input" value="">
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-success pull-right" data-toggle="modal"
+                                    data-target="#createUserModal"><i class="fa fa-plus"></i>&nbsp;
+                                    &nbsp; &nbsp;Add Field</button>
+                            </div>
+                            <div class="col-md-7"></div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary pull-right"><i
+                                        class="fa fa-search"></i>&nbsp; &nbsp; &nbsp;Search</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="single-table">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="bg-dark">
+                                            <tr class="text-white">
+                                                <th>Fusion Column</th>
+                                                <th>Fusion Column Type</th>
+                                                <th>Sheet Name</th>
+                                                <th>Sheet Column Name</th>
+                                                <th>Table Column Name</th>
+                                                <th>Mandatory</th>
+                                                <th>Data Type</th>
+                                                <th>Length</th>
+                                                <th>Date Format</th>
+                                                <th>Lookup Validation</th>
+                                                <th>Validation Message</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                    value="Name" readonly></td>
+                                                <td>
+                                                    <select class="form-control form-control-sm">
+                                                        <option>Mapping</option>
+                                                        <option>SQL</option>
+                                                        <option>Constant</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="Manage Primary Ledger"></td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="Ledger Name"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><select class="form-control form-control-sm">
+                                                    <option>VARCHAR2</option>
+                                                    <option>NUMBER</option>
+                                                    <option>DATE</option>
+                                                </select></td>
+                                                <td><input typ="text" class="form-control form-control-sm" value="30"
+                                                        style="text-align: right;"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                    value="AcctgEnvironmentCode" readonly></td>
+                                                <td>
+                                                    <select class="form-control form-control-sm">
+                                                        <option>Mapping</option>
+                                                        <option>SQL</option>
+                                                        <option>Constant</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="Manage Primary Ledger"></td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="Ledger Name"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><select class="form-control form-control-sm">
+                                                    <option>VARCHAR2</option>
+                                                    <option>NUMBER</option>
+                                                    <option>DATE</option>
+                                                </select></td>
+                                                <td><input typ="text" class="form-control form-control-sm" value="30"
+                                                        style="text-align: right;"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                    value="Attribute1" readonly></td>
+                                                <td>
+                                                    <select class="form-control form-control-sm">
+                                                        <option>SQL</option>
+                                                        <option>Mapping</option>
+                                                        <option>Constant</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value=""></td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value="select SYSDATE from dual"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><select class="form-control form-control-sm">
+                                                    <option>DATE</option>
+                                                    <option>VARCHAR2</option>
+                                                    <option>NUMBER</option>
+                                                </select></td>
+                                                <td><input typ="text" class="form-control form-control-sm" value="30"
+                                                        style="text-align: right;"></td>
+                                                <td><input type="text" class="form-control form-control-sm" value="yyyy-mm-dd"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                    value="Attribute2" readonly></td>
+                                                <td>
+                                                    <select class="form-control form-control-sm">
+                                                        <option>Constant</option>
+                                                        <option>Mapping</option>
+                                                        <option>SQL</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value=""></td>
+                                                <td><input type="text" class="form-control form-control-sm"
+                                                        value=""></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><select class="form-control form-control-sm">
+                                                    <option>VARCHAR2</option>
+                                                    <option>NUMBER</option>
+                                                    <option>DATE</option>
+                                                </select></td>
+                                                <td><input typ="text" class="form-control form-control-sm" value="30"
+                                                        style="text-align: right;"></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                                <td><select class="form-control form-control-sm">
+                                                        <option>Y</option>
+                                                        <option>N</option>
+                                                    </select></td>
+                                                <td><input type="text" class="form-control form-control-sm"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row pull-right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main content area end -->
+    <!-- footer area start-->
+    <footer>
+        <div class="footer-area">
+        </div>
+    </footer>
+    <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <div class="offset-area">
+
+    </div>
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

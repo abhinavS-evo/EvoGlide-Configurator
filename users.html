@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -59,6 +59,8 @@
                                         class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li class="active"><a href="users.html"><i class="ti-user"></i><span>Users</span></a></li>
+                            <li><a href="constasks.html"><i class="ti-settings"></i><span>Consolidated Tasks</span></a></li>
+                            <li><a href="tasks.html"><i class="ti-layers"></i><span>Tasks</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -71,7 +73,7 @@
             <div class="header-area">
                 <div class="row align-items-center">
                     <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
+                    <div class="col-md-4 col-sm-8 clearfix">
                         <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
@@ -82,13 +84,19 @@
                         </div>
                     </div>
                     <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
+                    <div class="col-md-5">
+                        <select class="custom-select form-control-sm col-md-5 pull-right" id="instanceSelect">
+                            <option>Demo Instance 1</option>
+                            <option>Demo Instance 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-4 clearfix" style="float: right;">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Demo User<i
                                     class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Log Out</a>
+                                <a class="dropdown-item" href="login.html">Log Out</a>
                             </div>
                         </div>
                     </div>
@@ -130,20 +138,6 @@
                                                 <div class="modal-body">
                                                     <form class="needs-validation" id="createSubmit" novalidate="">
                                                         <div class="form-row">
-                                                            <div class="col-md-5">
-                                                                <label for="instanceName"
-                                                                    class="col-form-label">Instance
-                                                                    name</label>
-                                                                <select class="custom-select" id="instanceName"
-                                                                    required>
-                                                                    <option value="instance 1">Demo Instance 1</option>
-                                                                    <option value="instance 2">Demo Instance 2</option>
-                                                                </select>
-                                                                <div class="invalid-feedback">
-                                                                    Please choose an instance
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-1"></div>
                                                             <div class="col-md-5">
                                                                 <label for="email" class="col-form-label">Email</label>
                                                                 <input type="email" class="form-control" id="email"
@@ -396,6 +390,18 @@
                 </div>
                 <div class="modal-body">
                     <form class="needs-validation" novalidate="">
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="1" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="1">Demo Instance 1</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="2" value="2" class="custom-control-input">
+                                <label class="custom-control-label" for="2">Demo Instance 2</label>
+                            </div>
+                        </div>
                         <div class="form-row pull-right">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
                             <button type="submit" class="btn btn-primary">Save changes</button>
@@ -414,6 +420,18 @@
                 </div>
                 <div class="modal-body">
                     <form class="needs-validation" novalidate="">
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="gl" value="gl" class="custom-control-input">
+                                <label class="custom-control-label" for="gl">General Ledger</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" id="init" value="init" class="custom-control-input">
+                                <label class="custom-control-label" for="init">Initial Setup</label>
+                            </div>
+                        </div>
                         <div class="form-row pull-right">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp;
                             <button type="submit" class="btn btn-primary">Save changes</button>
